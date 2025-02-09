@@ -39,10 +39,11 @@
         }
 
         .logo {
-            color: var(--primary-color);
-            font-size: 1.3rem;
-            font-weight: bold;
+            display: block;
+            width: 150px; /* Adjust size as needed */
+            height: auto;
         }
+    
 
         .nav-links a {
             color: var(--gray);
@@ -103,10 +104,12 @@
     </style>
 </head>
 <body>
+
     <nav>
-        <div class="logo">PadCare</div>
+        <a href="home.html">
+            <img src="logo.png" alt="Website Logo" class="logo">
+        </a>
         <div class="nav-links">
-            <a href="home.html">Home</a>
             <a href="index.html" class="logout">Logout</a>
         </div>
     </nav>

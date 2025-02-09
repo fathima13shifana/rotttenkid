@@ -39,12 +39,17 @@
             z-index: 1000;
         }
 
-        nav .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary-color);
+        .logo {
+            display: block;
+            width: 150px; /* Adjust size as needed */
+            height: auto;
         }
-
+        .nav-links a {
+            color: var(--gray);
+            text-decoration: none;
+            margin-left: 1rem;
+            font-size: 0.9rem;
+        }
         nav ul {
             list-style: none;
             display: flex;
@@ -160,13 +165,12 @@
 </head>
 <body>
     <nav>
-        <div class="logo">PadShare</div>
-        <ul>
-            
-            <li><a href="#">Stock</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+            <a href="home.html">
+            <img src="logo.png" alt="Website Logo" class="logo">
+        </a>
+        <div class="nav-links">
+            <a href="index.html" class="logout">Logout</a>
+        </div>
     </nav>
 
     <div class="container">

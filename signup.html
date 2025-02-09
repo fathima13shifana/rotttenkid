@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - PadShare</title>
+    <style>
+        :root {
+            --primary-color: #ff69b4;
+            --primary-light: #ffb6c1;
+            --white: #ffffff;
+            --gray-light: #f5f5f5;
+            --gray: #666666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--gray-light);
+            min-height: 100vh;
+        }
+
+        .back-btn {
+            padding: 1rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: block;
+        }
+
+        .auth-container {
+            padding: 1rem;
+        }
+
+        .auth-box {
+            background-color: var(--white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid var(--gray-light);
+            border-radius: 25px;
+            font-size: 1rem;
+            background-color: var(--white);
+        }
+
+        .btn {
+            width: 100%;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+
+        .btn.primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .auth-redirect {
+            text-align: center;
+            margin-top: 1.5rem;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .auth-redirect a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <a href="login.html" class="back-btn">← Back</a>
+    <div class="auth-container">
+        <div class="auth-box">
+            <h2>Create Account</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <input type="text" id="fullName" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <select id="department" required>
+                        <option value="">Select Department</option>
+                        <option value="computer science">Computer Science</option>
+                        <option value="literature">Literature</option>
+                        <option value="mathematics">Mathematics</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="classNumber" placeholder="Class Number" required>
+                </div>
+                <div class="form-group">
+                    <select id="year" required>
+                        <option value="">Select Year</option>
+                        <option value="1">First Year</option>
+                        <option value="2">Second Year</option>
+                        <option value="3">Third Year</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phoneNumber" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="Create Password" required>
+                </div>
+                <button type="submit" class="btn primary">Sign Up</button>
+            </form>
+            <p class="auth-redirect">Already have an account? <a href="login.html">Login</a></p>
+        </div>
+    </div>
+    <script type="module" src="firebase-config.js">
+    
+        
+    </script>
+    <script type="module" src="signup.js"></script>
+</body>
+</html>
